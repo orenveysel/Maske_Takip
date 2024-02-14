@@ -52,7 +52,10 @@ namespace WorkAround
             Console.WriteLine(sehirler2[0]);
 
             Person person1 = new Person();
-            person1.FirstName = "Veysel";
+            person1.FirstName = "DONALD";
+            person1.LastName = "TRUMP";
+            person1.DateOfBirthYear = 1905;
+            person1.NationalIdentity = 12345678910;  //replace this fake data of person1 with real data for identity check
 
             Person person2 = new Person();
             person2.FirstName = "Murat";
@@ -63,7 +66,7 @@ namespace WorkAround
             }
 
             //MyList
-            List<string> yeniSehirler1 = new List<string>("Ankara 1", "İstanbul 1", "İzmir 1");
+            List<string> yeniSehirler1 = new List<string> { "Ankara 1", "İstanbul 1", "İzmir 1" };
             yeniSehirler1.Add(item: "Adana");
             foreach (var sehir in yeniSehirler1)
             {
@@ -71,7 +74,7 @@ namespace WorkAround
             }
 
             PttManager pttManager = new PttManager(new PersonManager());
-            pttManager.GiveMask(person1)
+            pttManager.GiveMask(person1);
 
             Console.ReadLine();
         }
